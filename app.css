@@ -1,0 +1,297 @@
+body, input{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+  
+  }
+  
+  input{
+    padding-left: 10px;
+  }
+  
+  h1{
+    display: block;
+    margin: auto;
+    text-align:center;
+    padding: 15px;
+  }
+  
+  *:focus {
+      outline: none;
+  }
+  
+  .container{
+    margin:80px auto;
+    width: 60px;
+    height: 60px;
+    position:relative;
+    transform-origin:center bottom;
+    animation-name: flicker;
+    animation-duration:3ms;
+    animation-delay:200ms;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+  #flame-container{
+    transform: rotate(220deg);
+    position: absolute;
+    right: 75px;
+    bottom: -105px;
+    z-index: -100;
+  }
+  
+  #flame-container.safari{
+    transform: rotate(220deg);
+    position: absolute;
+    right: 120px !important;
+    bottom: -105px;
+    z-index: -100;
+  }
+  
+  .flame{
+    bottom:0;
+    position:absolute;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    transform:rotate(-45deg) scale(1.5,1.5);
+  }
+  
+  .yellow{
+    left: 20px;
+  width: 5px;
+  height: 10px;
+  background: gold;
+  box-shadow: 0px 0px 9px 4px gold;
+  }
+  
+  .orange{
+    left: 20px;
+  width: 10px;
+  height: 15px;
+  background: orange;
+  box-shadow: 0px 0px 9px 4px orange;
+  }
+  
+  .red{
+    left: 16px;
+      width: 15px;
+      height: 15px;
+      background: OrangeRed;
+      box-shadow: 0px 0px 5px 4px orangered;
+  }
+  
+  .white{
+    left: 18px;
+    bottom: -10px;
+    width: 12px;
+    height: 12px;
+    background: white;
+    box-shadow: 0px 0px 9px 4px white;
+  }
+  
+  .circle{
+    border-radius: 50%;
+    position:absolute;
+  }
+  
+  .blue{
+    width: 10px;
+    height: 10px;
+    left:25px;
+    bottom:-25px;
+    background: SlateBlue;
+    box-shadow: 0px 0px 15px 10px SlateBlue;
+  }
+  
+  .black{
+    width: 40px;
+    height: 40px;
+    left:10px;
+    bottom:-60px;
+    background: black;
+    box-shadow: 0px 0px 15px 10px black;
+  }
+  
+  @keyframes flicker{
+    0%   {transform: rotate(-1deg);}
+    20%  {transform: rotate(1deg);}
+    40%  {transform: rotate(-1deg);}
+    60%  {transform: rotate(1deg) scaleY(1.04);}
+    80%  {transform: rotate(-2deg) scaleY(0.92);}
+    100% {transform: rotate(1deg);}
+  }
+  
+  #button{
+    color: white;
+    padding: 10px;
+    width: 150px; display: block; margin: auto; border: solid 1px black; background-color: #5F9EA0; text-align: center; cursor: pointer;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 0PX;
+    font-size: 20px;
+  }
+  
+  /* Change the white to any color ;) */
+  input:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 30px white inset;
+      box-shadow: 0 0 0 30px white inset
+  } 
+  
+  #parent{
+    position: relative; width: 400px; display: block; margin: auto;
+  }
+  
+  #query-form{
+    display: block;
+    margin: auto;
+    margin-left: 0px;
+    width: 400px;
+    padding: 10px;
+    font-size: 20px;
+  }
+  
+  #belly{
+    display: none; margin: auto; min-width: 500px;
+  }
+  
+  #target{
+    font-size: 100px; margin: auto; text-align: center;
+    animation: zoom-num 1s infinite;
+    width: 100px;
+    position: relative;
+    display: none;
+  }
+  
+  @keyframes zoom-num {
+    0%{
+      transform: scale(0);
+    } 100% {
+      transform: scale(1.1);
+    }
+  }
+  
+  @media only screen and (max-width: 500px){
+    #button{
+      background-color: #5F9EA0;
+      border-radius: 5px;
+    }
+    #parent{
+      width: 400px;
+    }
+    h1{
+      font-size: 30px;
+    }
+    input{
+      width: 300px;
+      border: solid 1px black;
+  
+    }
+  
+    #belly{
+      max-width: 300px;
+      min-width: auto;
+    }
+    .container{
+      margin:80px auto;
+      width: 60px;
+      height: 60px;
+      position:relative;
+      transform-origin:center bottom;
+      animation-name: flicker;
+      animation-duration:3ms;
+      animation-delay:200ms;
+      animation-timing-function: ease-in;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+  
+    #flame-container{
+      transform: rotate(220deg);
+      position: absolute;
+      right: 105px;
+      bottom: -110px;
+      z-index: -100;
+    }
+  
+    .flame{
+      bottom:0;
+      position:absolute;
+      border-bottom-right-radius: 50%;
+      border-bottom-left-radius: 50%;
+      border-top-left-radius: 50%;
+      transform:rotate(-45deg) scale(1.5,1.5);
+    }
+  
+    .yellow{
+      left: 20px;
+    width: 5px;
+    height: 10px;
+    background: gold;
+    box-shadow: 0px 0px 9px 4px gold;
+    }
+  
+    .orange{
+      left: 20px;
+    width: 10px;
+    height: 15px;
+    background: orange;
+    box-shadow: 0px 0px 9px 4px orange;
+    }
+  
+    .red{
+      left: 16px;
+        width: 15px;
+        height: 15px;
+        background: OrangeRed;
+        box-shadow: 0px 0px 5px 4px orangered;
+    }
+  
+    .white{
+      left: 18px;
+      bottom: -10px;
+      width: 12px;
+      height: 12px;
+      background: white;
+      box-shadow: 0px 0px 9px 4px white;
+    }
+  
+    .circle{
+      border-radius: 50%;
+      position:absolute;
+    }
+  
+    .blue{
+      width: 10px;
+      height: 10px;
+      left:25px;
+      bottom:-25px;
+      background: SlateBlue;
+      box-shadow: 0px 0px 15px 10px SlateBlue;
+    }
+  
+    .black{
+      width: 40px;
+      height: 40px;
+      left:10px;
+      bottom:-60px;
+      background: black;
+      box-shadow: 0px 0px 15px 10px black;
+    }
+  }
+  
+  @media only screen and (max-width: 400px){
+    #flame-container{
+      transform: rotate(220deg);
+      position: absolute;
+      right: 90px;
+      bottom: -110px;
+      z-index: -100;
+    }
+    #button{
+      background-color: #5F9EA0;
+      border-radius: 5px;
+    }
+  }
+  

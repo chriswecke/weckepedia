@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <!-- Title -->
+    <title>Gif Generator</title>
+
+    <!-- Meta Description -->
+    <meta name="description" content="I think it is working">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS STYLESHEET--->
+    <link rel="stylesheet" type="text/css" href="app.css">
+
+    <!--GOOGLE FONT--->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <!--FONTAWESOME--->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+
+
+  <!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- JAVASCRIPT-->
+<script src="config.js"></script>
+<script src="app.js"></script>
+
+</head>
+
+<div id="parent" >
+
+  <h1>Gif Generator&nbsp;&nbsp; <i class="fas fa-rocket"></i></h1>
+  <div id="flame-container">
+    <div class="container">
+      <div class="red flame"></div>
+      <div class="orange flame"></div>
+      <div class="yellow flame"></div>
+      <div class="white flame"></div>
+    </div>
+  </div>
+
+</div>
+
+<form id="query-form" onsubmit="runTimer(query)">
+  <label for="query">KEYWORD</label>
+  <input name="query" type="text" required>
+  <input type="submit" id="button" value="GENERATE">
+
+
+</form>
+
+<div id="target">
+
+</div>
+
+<img id="belly" src=""/>
+<!-- <img src="https://media0.giphy.com/media/CxKThxslLZ3xe/giphy-downsized.gif" /> -->
+</html>
